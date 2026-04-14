@@ -1,0 +1,49 @@
+# ======================
+# Python / FastAPI
+# ======================
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+
+# Virtual Environment
+venv/
+.env/
+.env
+
+# ======================
+# Node / React
+# ======================
+node_modules/
+build/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ======================
+# OS Files
+# ======================
+.DS_Store
+Thumbs.db
+
+# ======================
+# IDE
+# ======================
+.vscode/
+.idea/
+
+# ======================
+# Environment Variables
+# ======================
+.env.local
+.env.development
+.env.production
+
+# ======================
+# Misc
+# ======================
+*.swp
+*.swo
