@@ -1,5 +1,7 @@
 from fastapi import FastAPI
+from core.database import Base, engine
 from fastapi.middleware.cors import CORSMiddleware
+from apps.auth.routes.auth_routes import router as auth_router
 
 app = FastAPI()
 
@@ -11,6 +13,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+Base.metadata.create_all(bind=engine)
+
+app.include_router(auth_router)
 
 @app.get("/")
 def root():
