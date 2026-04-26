@@ -10,6 +10,8 @@
 .main-container{
     background-color: #e0fbfc;
     height: 90%;
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
 .side-bar-elements {
@@ -61,3 +63,178 @@ ul.side-bar-elements {
   border-bottom: 1px solid #98c1d9;
   height: 10%;
 }
+
+/* Form container */
+.common-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Each field */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Label */
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #293241;
+}
+
+/* Input */
+.form-input {
+  padding: 10px 12px;
+  border: 1px solid #98c1d9;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.form-input:focus {
+  border-color: #3d5a80;
+}
+
+/* Error */
+.form-error {
+  color: #ee6c4d;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #3d5a80;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #2f4a66;
+}
+
+.btn-secondary {
+  background-color: #e0fbfc;
+  color: #293241;
+  border: 1px solid #98c1d9;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #cdeef2;
+}
+
+
+
+
+
+.table-container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.common-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.common-table th {
+  background-color: #3d5a80;
+  color: white;
+  text-align: left;
+  padding: 10px;
+}
+
+.common-table td {
+  padding: 10px;
+  border-bottom: 1px solid #e0fbfc;
+}
+
+.common-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.no-data {
+  text-align: center;
+  padding: 15px;
+  color: #888;
+}
+
+.action-cell {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.action-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* optional styling */
+.action-btn.edit:hover {
+  color: #3d5a80;
+}
+
+.action-btn.delete:hover {
+  color: #ee6c4d;
+}
+
+.action-cell {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.action-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.action-btn:hover {
+  background-color: #f1f5f9;
+}
+
+.action-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Optional color hints */
+.action-btn.edit:hover {
+  background-color: #e0f2fe;
+}
+
+.action-btn.delete:hover {
+  background-color: #fee2e2;
+}
+

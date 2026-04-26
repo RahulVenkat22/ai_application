@@ -1,0 +1,35 @@
+.btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Variants */
+.btn-primary {
+  background-color: #3d5a80;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #98c1d9;
+  color: #293241;
+}
+
+.btn-danger {
+  background-color: #ee6c4d;
+  color: white;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid #3d5a80;
+  color: #3d5a80;
+}
+
+/* Disabled */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

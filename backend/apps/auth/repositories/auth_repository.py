@@ -1,13 +1,25 @@
-from apps.auth.models.user_model import User
+from ..models.auth_model import RefreshToken
 
 class AuthRepository:
 
-    def create_user(self, db, email, password):
-        user = User(email=email, password=password)
-        db.add(user)
+    def create_refresh_token(self, db, user_id, token_hash, expires_at):
+        token = RefreshToken(
+            user_id=user_id,
+            token_hash=token_hash,
+            expires_at=expires_at
+        )
+        db.add(token)
         db.commit()
-        db.refresh(user)
-        return user
+        return token
 
-    def get_user_by_email(self, db, email):
-        return db.query(User).filter(User.email == email).first()
+
+    def get_refresh_token(self, db, token_hash):
+        return db.query(RefreshToken).filter(
+            RefreshToken.token_hash == token_hash,
+            RefreshToken.is_revoked == False
+        ).first()
+
+
+    def revoke_token(self, db, token):
+        token.is_revoked = True
+        db.commit()

@@ -1,0 +1,35 @@
+.confirm-modal .modal-content {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+.confirm-header {
+  background-color: #293241;
+  color: #ffffff;
+  border-bottom: none;
+  padding: 16px 20px;
+}
+
+.confirm-header .modal-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Body */
+.confirm-body {
+  padding: 20px;
+  font-size: 15px;
+  color: #3d5a80;
+  text-align: center;
+}
+
+/* Footer */
+.confirm-footer {
+  padding: 16px 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  border-top: none;
+}
